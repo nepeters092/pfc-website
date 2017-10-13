@@ -1,0 +1,206 @@
+/* Scss Document */
+/* Imports */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,900");
+/* Variables */
+body {
+  max-width: 100vw;
+  overflow-x: hidden; }
+
+.full-page, #home, #services, #team, #contact {
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  z-index: 0;
+  position: relative; }
+
+.page-content {
+  width: 100vw;
+  padding: 5% 50px;
+  max-height: 100%;
+  height: auto; }
+
+h1, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900; }
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px; }
+
+button {
+  background-color: #328cc1;
+  border: none;
+  padding: 15px 20px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+  button:hover {
+    background-color: #163F58; }
+
+a {
+  font-color: #328cc1; }
+
+.circle, .small-circle, .big-circle {
+  border-radius: 50%;
+  margin: 30px auto;
+  border: 1px solid #e3e3e3; }
+
+.small-circle {
+  height: 200px;
+  width: 200px; }
+
+.big-circle {
+  height: 250px;
+  width: 250px; }
+
+.anchor {
+  display: block;
+  height: 110px;
+  margin-top: -110px;
+  visibility: hidden; }
+
+nav {
+  min-height: 110px;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 60px 0 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700; }
+  nav a {
+    text-decoration: none; }
+    nav a:hover {
+      text-decoration: none; }
+  nav #mobile-menu {
+    height: 140px;
+    width: 100vw;
+    background-color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: none; }
+    nav #mobile-menu ul {
+      margin: 0;
+      padding: 10px 0;
+      list-style: none;
+      font-size: 18px; }
+      nav #mobile-menu ul li {
+        margin-bottom: 20px; }
+  nav .container-fluid {
+    margin: 0;
+    padding: 0;
+    position: relative; }
+    nav .container-fluid .row {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      height: 110px; }
+      nav .container-fluid .row .col-xs-6 {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 110px; }
+        nav .container-fluid .row .col-xs-6 img {
+          height: 80px;
+          margin: 15px 0; }
+        nav .container-fluid .row .col-xs-6 #menu-icon {
+          font-size: 20px;
+          margin: 45px 30px 45px 0;
+          text-align: right; }
+  nav #nav-links {
+    text-align: right;
+    font-size: 18px;
+    height: 110px; }
+    nav #nav-links ul {
+      margin: 44px 0; }
+      nav #nav-links ul li {
+        display: inline-block;
+        margin-right: 40px; }
+
+#home {
+  text-align: center;
+  color: #000; }
+  #home .page-content {
+    margin-top: 110px; }
+
+#services {
+  background-image: url(../img/background-blue.png);
+  background-color: #328cc1;
+  background-size: 200px 200px;
+  text-align: center; }
+  #services h1, #services h3 {
+    color: #fff; }
+  #services p {
+    color: #e3e3e3; }
+  #services .row {
+    text-align: left; }
+    #services .row p {
+      font-family: 'Roboto', sans-serif; }
+  #services .page-content {
+    display: none; }
+
+#team h1, #team p {
+  text-align: center; }
+#team .container-fluid {
+  text-align: center; }
+  #team .container-fluid p {
+    font-family: 'Roboto', sans-serif; }
+#team .page-content {
+  display: none; }
+#team #steve-pic {
+  background-image: url(../img/steve.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+#team #john-pic {
+  background-image: url(../img/john.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+#team #natalie-pic {
+  background-image: url(../img/natalie.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#contact .page-content {
+  padding: 0; }
+  #contact .page-content #map {
+    height: 100vh;
+    width: 100vw; }
+
+footer {
+  height: 200px;
+  width: 100vw;
+  background-color: #328cc1;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0; }
+
+@media only screen and (min-width: 768px) {
+  #menu-icon {
+    display: none; }
+
+  #nav-links {
+    display: block; }
+
+  #home .page-content {
+    padding: 10%; } }
+/* Small screens custom query */
+@media only screen and (max-width: 768px) {
+  #nav-links {
+    display: none; }
+
+  #home .page-content {
+    padding: 20% 10%; }
+
+  nav {
+    padding: 0; } }
+
+/*# sourceMappingURL=pfc.css.map */

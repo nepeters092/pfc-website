@@ -1,0 +1,304 @@
+/* Scss Document */
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,900');
+
+
+/* Variables */ 
+$pfc-blue: #328cc1;
+
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+.full-page {
+	min-height: 100vh;
+	height: auto;
+	width: 100vw;
+	z-index: 0;
+	position: relative;
+}
+
+.page-content {
+	width: 100vw;
+	padding: 5% 50px;
+	max-height: 100%;
+	height: auto;
+}
+
+h1, h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+button {
+	background-color: $pfc-blue;
+	border: none;
+	padding: 15px 20px;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	-webkit-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-ms-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+	&:hover {
+		background-color: #163F58;
+	}
+}
+
+a {
+	font-color: $pfc-blue;
+}
+
+.circle {
+	border-radius: 50%;
+	margin: 30px auto;
+	border: 1px solid #e3e3e3;
+}
+
+.small-circle {
+	@extend .circle;
+	height: 200px;
+	width: 200px;
+}
+
+.big-circle {
+	@extend .circle;
+	height: 250px;
+	width: 250px;
+}
+
+.anchor {
+	display: block;
+	height: 110px;
+	margin-top: -110px;
+	visibility: hidden;
+}
+
+
+nav {
+	min-height: 110px;
+	width: 100vw;
+	position: fixed;
+	z-index: 1;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0 60px 0 40px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}	
+	
+	#mobile-menu {
+		height: 140px;
+		width: 100vw;
+		background-color: #fff;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		display: none;
+		ul {
+			margin: 0;
+			padding: 10px 0;
+			list-style: none;
+			font-size: 18px;
+			li {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.container-fluid {
+		margin: 0;
+		padding: 0;
+		position: relative;
+		
+		.row {
+			margin: 0;
+			padding: 0;
+			position: relative;
+			height: 110px;
+			
+			.col-xs-6 {
+				margin: 0;
+				padding: 0;
+				position: relative;
+				height: 110px;
+				
+				img {
+					height: 80px;
+					margin: 15px 0;
+				}
+			
+				#menu-icon {
+					font-size: 20px;
+					margin: 45px 30px 45px 0;
+					text-align: right;
+				}
+				
+			}
+			
+		}
+	}
+	
+	#nav-links {
+		text-align: right;
+		font-size: 18px;
+		height: 110px;
+		ul {
+			margin: 44px 0;
+			li {
+				display: inline-block;
+				margin-right: 40px;
+			}	
+		}
+	}
+	
+}
+
+#home {
+	@extend .full-page;
+	text-align: center;
+	color: #000;
+	.page-content {
+		margin-top: 110px;
+	}
+}
+
+#services {
+	@extend .full-page;
+	background-image: url(../img/background-blue.png);
+	background-color: $pfc-blue;
+	background-size: 200px 200px;
+	text-align: center;
+	
+	h1, h3 {
+		color: #fff;
+	}
+	
+	p {
+		color: #e3e3e3;
+	}
+	
+	.row {
+		text-align: left;
+		
+		p {
+			font-family: 'Roboto', sans-serif;
+		}
+		
+	}
+	
+	.page-content {
+		display:none;
+	}
+	
+}
+
+#team {
+	@extend .full-page;
+	h1, p {
+		text-align: center;
+	}
+	.container-fluid {
+		text-align: center;
+		p {
+			font-family: 'Roboto', sans-serif;
+		}
+	}
+	
+	.page-content {
+		display: none;
+	}
+	
+	#steve-pic {
+		background-image: url(../img/steve.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	#john-pic {
+		background-image: url(../img/john.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	#natalie-pic {
+		background-image: url(../img/natalie.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+#contact {
+	@extend .full-page;
+	.page-content {
+		padding: 0;
+		#map {
+			height: 100vh;
+			width: 100vw;
+		}
+	}
+
+}
+
+footer {
+	height: 200px;
+	width: 100vw;
+	background-color: $pfc-blue;
+	color: #fff;
+	text-align: center;
+	padding: 50px 0;
+}
+
+@media only screen and (min-width: 768px) {
+	#menu-icon {
+		display: none;
+	}
+	
+	#nav-links {
+		display: block;
+	}
+	
+	#home {
+		.page-content {
+			padding: 10%; 
+		}
+	}
+	
+}
+
+/* Small screens custom query */
+
+@media only screen and (max-width: 768px) {
+	
+	#nav-links {
+		display: none;
+	}
+	
+	#home {
+		.page-content {
+			padding: 20% 10%;
+		}
+	}
+	
+	nav {
+		padding: 0;
+	}
+	
+}
+
